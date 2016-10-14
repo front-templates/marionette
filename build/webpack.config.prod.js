@@ -25,6 +25,10 @@ module.exports = function(require) {
 					exclude: /node_modules/
 				},
 				{
+					test: /\.tpl$/i,
+					loader: 'handlebars-template-loader'
+				},
+				{
 					test: /\.css$/i,
 					loader: ExtractTextPlugin.extract(['css-loader'], { publicPath: '../../' })
 				},
