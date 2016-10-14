@@ -5,7 +5,7 @@ module.exports = Marionette.ItemView.extend({
 	template: require('templates/commons/footer.tpl'),
 
 	templateHelpers: {
-		organization: '<%= organization %>',
+		organization: pkg.organization,
 		version: pkg.version
 	}
 });
