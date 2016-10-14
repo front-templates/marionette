@@ -12,7 +12,11 @@
 		"backbone-query-parameters": "github:jhudson8/backbone-query-parameters#v0.4.0",
 		"backbone.marionette": "github:marionettejs/backbone.marionette#v2.0.2",
 		"bootstrap": "^3.3.7",
+		"handlebars": "^4.0.5",
 		"jquery": "^3.1.1",
 		"underscore": "1.8.3"
+	},
+	"devDependencies": {
+		"handlebars-template-loader": "^0.7.0"
 	}
 }
