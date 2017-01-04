@@ -1,5 +1,5 @@
 window.Config = {
-	BASE_URL: 'API',
+	BASE_URL: 'api',
 	CDN_URL: '',
 	ENV: 'DEVELOPMENT'
 };
