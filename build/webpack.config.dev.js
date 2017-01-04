@@ -66,6 +66,12 @@ module.exports = function(require) {
 			})
 		],
 
-		devtool: 'cheap-module-eval-source-map'
+		devtool: 'cheap-module-eval-source-map',
+
+		devServer: {
+			hot: true,
+			quiet: true,
+			clientLogLevel: 'error'
+		}
 	};
 };
