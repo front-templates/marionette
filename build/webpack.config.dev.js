@@ -71,7 +71,18 @@ module.exports = function(require) {
 		devServer: {
 			hot: true,
 			quiet: true,
-			clientLogLevel: 'error'
+			clientLogLevel: 'error',
+
+			// uncomment the following lines to enable proxy
+
+			// proxy: {
+			// 	'/api': {
+			// 		target: 'http://PROXY_URL',
+			// 		changeOrigin: true,
+			// 		pathRewrite: {'^/api' : ''},
+			// 		logLevel: 'error'
+			// 	}
+			// }
 		}
 	};
 };
