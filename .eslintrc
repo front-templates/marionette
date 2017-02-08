@@ -8,11 +8,16 @@
 	"parserOptions": {
 		"sourceType": "module"
 	},
+	"plugins": ["vue"],
+	"globals": {
+		"Config": true
+	},
 	"rules": {
 		"indent": ["error", "tab"],
 		"linebreak-style": 0,
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],
+		"no-extra-semi": "error",
 		"no-console": ["error", { "allow": ["warn", "error"] }],
 		"no-empty": ["error", { "allowEmptyCatch": true }]
 	}
