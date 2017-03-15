@@ -22,7 +22,7 @@ module.exports = function (require) {
 		entry: {
 			application: [
 				'webpack-dev-server/client?{{host}}:{{port}}',
-				'webpack/hot/only-dev-server',
+				'webpack/hot/dev-server',
 				path.resolve(__dirname, '../application/main.js')
 			]
 		},
