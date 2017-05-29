@@ -1,2 +1,0 @@
-# marionette
-Marionette.js template
