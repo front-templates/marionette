@@ -111,7 +111,8 @@ module.exports = function(require) {
 				allChunks: true
 			}),
 			new PurifyCSSPlugin({
-				paths: glob.sync(path.join(__dirname, '../**/*.{htm,html,vue,tpl}')),
+				paths: glob.sync(path.join(__dirname, '../**/*.{htm,html,tpl}')),
+				moduleExtensions: ['.htm', '.html', '.tpl', '.js'],
 				minimize: true
 			}),
 			new webpack.BannerPlugin({
