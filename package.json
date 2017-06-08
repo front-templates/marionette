@@ -8,15 +8,17 @@
 		"Developer #1 <developer1@mail.com>"
 	],
 	"dependencies": {
-		"backbone": "1.1.2",
-		"backbone-query-parameters": "github:jhudson8/backbone-query-parameters#v0.4.0",
-		"backbone.marionette": "github:marionettejs/backbone.marionette#v2.0.2",
+		"backbone": "^1.1.2",
+		"backbone-query-parameters": "^0.4.0",
+		"backbone.marionette": "^2.0.2",
 		"bootstrap": "^3.3.7",
 		"handlebars": "^4.0.5",
-		"jquery": "^3.1.1",
-		"underscore": "1.8.3"
+		"jquery": "^3.2.1",
+		"underscore": "^1.8.3"
 	},
 	"devDependencies": {
+		"eslint": "^3.19.0",
+		"eslint-loader": "^1.7.1",
 		"handlebars-template-loader": "^0.7.0"
 	}
 }
