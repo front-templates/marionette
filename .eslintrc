@@ -9,7 +9,6 @@
 		"sourceType": "module",
 		"ecmaVersion": 8 // or 2017
 	},
-	"plugins": ["vue"],
 	"globals": {
 		"Config": true
 	},
