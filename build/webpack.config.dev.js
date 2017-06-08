@@ -1,5 +1,5 @@
 // the 'require' parameter is in the context of front-cli, not the application
-module.exports = function (require) {
+module.exports = require => {
 	var path = require('path');
 	var webpack = require('webpack');
 	var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -7,15 +7,13 @@ module.exports = function (require) {
 		presets: [
 			[require.resolve('babel-preset-env'), {
 				targets: {
-					browsers: ['ie >= 9']
+					browsers: ['ie >= 11']
 				},
 				modules: false,
 				useBuiltIns: true,
 				debug: false
 			}]
-		],
-
-		compact: true
+		]
 	};
 
 	return {
@@ -29,7 +27,8 @@ module.exports = function (require) {
 
 		output: {
 			path: path.resolve(__dirname, '../dist'),
-			filename: '[name].js'
+			filename: '[name].js',
+			chunkFilename: '[name].js'
 		},
 
 		module: {
@@ -80,9 +79,14 @@ module.exports = function (require) {
 				jQuery: 'jquery'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
+				name: 'application',
+				children: true,
+				minChunks: 2
+			}),
+			new webpack.optimize.CommonsChunkPlugin({
 				name: 'libs',
-				minChunks: function (module) {
-					return module.context && module.context.indexOf('node_modules') !== -1;
+				minChunks({ context }) {
+					return context && context.indexOf('node_modules') >= 0;
 				}
 			}),
 			new HtmlWebpackPlugin({
